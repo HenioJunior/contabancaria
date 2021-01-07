@@ -3,15 +3,27 @@ package com.crystaldata.contabancaria.DTO;
 import java.io.Serializable;
 import java.time.Instant;
 
+import javax.persistence.Column;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.PastOrPresent;
+
 import com.crystaldata.contabancaria.entities.Cliente;
 
 public class ClienteDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String nome;
+	
+	@Email(message = "Favor informar um email válido")
 	private String email;
+	
 	private String cpf;
+	
+	@PastOrPresent(message = "A data de nascimento não pode ser futura")
 	private Instant dataNascimento;
 	
 	public ClienteDTO() {}
