@@ -2,7 +2,7 @@
 
 # Sobre o projeto
 
-API REST para suportar o processo de abertura de nova conta no banco.
+API REST para suportar o processo de abertura de nova conta bancária.
 O primeiro passo desse fluxo é o cadastro dos dados pessoais.
 
 Atributos utilizados:
@@ -13,8 +13,6 @@ CPF
 Data de nascimento
 
 # Tecnologias utilizadas
-
-## Back end
 - Java
 - Spring Boot
 - JPA / Hibernate
